@@ -1,5 +1,6 @@
 import React from 'react';
 import Story from './Story';
+import Button from './Button';
 import './Stories.css';
 
 const Stories = (props) => {
@@ -7,15 +8,15 @@ const Stories = (props) => {
     <div className='Stories'>
       <div className='  stories-header'>
         <h3>{props.storiesTitle}</h3>
-        <a href='#'>See more</a>
+        <Button buttonType='light'
+                buttonText='See More' />
       </div>
       <div className='stories-grid'>
         {
           props.stories.map( (story, index) => {
-            console.log(story);
-            // INSTEAD OF returning the div below, return a Story component
-            // Be sure to pass down the correct props!
-            return (<div>{story.title}</div>)
+            return (
+              <Story img={story.img} title={story.title} desc={story.desc} author={story.authName} authImg={story.authImg} estTime={story.estTime} />
+              )
           })
         }
       </div>

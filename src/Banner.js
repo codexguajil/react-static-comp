@@ -11,7 +11,7 @@ const Banner = () => {
         <div className='button-holder'>
           <Button buttonType='dark'
                   buttonText='Get started' />
-          <Button buttonType='light'
+          <Button buttonType='medium'
                   buttonText='Learn more' />
         </div>
       </div>

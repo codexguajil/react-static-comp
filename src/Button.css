@@ -18,5 +18,10 @@
 }
 
 .light {
+  border: none;
+  color: lightblue;
+}
+
+.medium {
   color: #2d2d2d;
 }
